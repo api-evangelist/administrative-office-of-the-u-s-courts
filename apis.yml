@@ -10,6 +10,9 @@ apis:
       using your PACER username and password. The PACER Authentication API
       allows the user to authenticate automatically and without a user
       interface. This can help facilitate access for automated systems.
+    tags:
+      - Courts
+      - Legal
   - aid: administrative-office-of-the-u-s-courts:pacer-case-locator-pcl-api
     name: PACER Case Locator (PCL) API
     humanURL: >-
