@@ -19,6 +19,9 @@ apis:
       The public PCL API allows users to programmatically search the PCL for
       federal cases or associated parties. This API uses the same search
       functionality as the PCL application and searches the same data set.
+    tags:
+      - Legal
+      - Courts
 name: Administrative Office of the U.S. Courts
 tags:
   - Federal Government
