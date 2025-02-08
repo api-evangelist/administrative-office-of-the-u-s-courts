@@ -1,0 +1,120 @@
+openapi: 3.1.0
+info:
+  title: PACER Case Locator API
+  description: API for searching federal court cases and associated parties.
+  version: 1.0.0
+servers:
+  - url: https://qa-pcl.uscourts.gov/pcl-public-api/rest
+    description: QA Environment
+  - url: https://pcl.uscourts.gov/pcl-public-api/rest
+    description: Production Environment
+paths:
+  /cases/find:
+    post:
+      summary: Search for cases
+      description: Returns a list of cases matching the search criteria.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CaseSearchRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseSearchResponse'
+  /parties/find:
+    post:
+      summary: Search for parties
+      description: Returns a list of parties matching the search criteria.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartySearchRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PartySearchResponse'
+components:
+  schemas:
+    CaseSearchRequest:
+      type: object
+      properties:
+        caseNumberFull:
+          type: string
+        caseTitle:
+          type: string
+        dateFiledFrom:
+          type: string
+          format: date
+        dateFiledTo:
+          type: string
+          format: date
+    CaseSearchResponse:
+      type: object
+      properties:
+        receipt:
+          type: object
+          properties:
+            transactionDate:
+              type: string
+              format: date-time
+            billablePages:
+              type: integer
+            searchFee:
+              type: string
+        cases:
+          type: array
+          items:
+            type: object
+            properties:
+              courtId:
+                type: string
+              caseId:
+                type: integer
+              caseTitle:
+                type: string
+              dateFiled:
+                type: string
+                format: date
+    PartySearchRequest:
+      type: object
+      properties:
+        lastName:
+          type: string
+        firstName:
+          type: string
+        caseNumberFull:
+          type: string
+    PartySearchResponse:
+      type: object
+      properties:
+        receipt:
+          type: object
+          properties:
+            transactionDate:
+              type: string
+              format: date-time
+            billablePages:
+              type: integer
+            searchFee:
+              type: string
+        parties:
+          type: array
+          items:
+            type: object
+            properties:
+              lastName:
+                type: string
+              firstName:
+                type: string
+              caseNumberFull:
+                type: string
