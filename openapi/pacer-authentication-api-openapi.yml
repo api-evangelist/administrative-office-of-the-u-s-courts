@@ -1,0 +1,130 @@
+openapi: 3.1.0
+info:
+  title: PACER Authentication API
+  description: API for authenticating users with PACER credentials.
+  version: 1.0.0
+servers:
+  - url: https://{environment}.uscourts.gov
+    variables:
+      environment:
+        enum:
+          - qa-login
+          - pacer.login
+        default: qa-login
+paths:
+  /services/cso-auth:
+    post:
+      summary: Authenticate a user
+      description: >-
+        Authenticate using PACER username and password to get an authentication
+        token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                loginId:
+                  type: string
+                  description: PACER username
+                password:
+                  type: string
+                  description: PACER password
+                clientCode:
+                  type: string
+                  description: Optional client code for court searches
+                redactFlag:
+                  type: string
+                  enum:
+                    - '1'
+                  description: Required for filers to comply with redaction rules
+          application/xml:
+            schema:
+              type: object
+              xml:
+                name: CsoAuth
+              properties:
+                loginId:
+                  type: string
+                password:
+                  type: string
+                clientCode:
+                  type: string
+                redactFlag:
+                  type: string
+      responses:
+        '200':
+          description: Successful authentication
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  nextGenCSO:
+                    type: string
+                    description: Authentication token
+                  loginResult:
+                    type: string
+                    description: Login result code
+                  errorDescription:
+                    type: string
+                    description: Error details, if any
+            application/xml:
+              schema:
+                type: object
+                xml:
+                  name: CsoAuth
+                properties:
+                  nextGenCSO:
+                    type: string
+                  loginResult:
+                    type: string
+                  errorDescription:
+                    type: string
+  /services/cso-logout:
+    post:
+      summary: Logout a user
+      description: Invalidates the authentication token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nextGenCSO:
+                  type: string
+                  description: Authentication token to be invalidated
+          application/xml:
+            schema:
+              type: object
+              xml:
+                name: CsoAuth
+              properties:
+                nextGenCSO:
+                  type: string
+      responses:
+        '200':
+          description: Successful logout
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  loginResult:
+                    type: string
+                    description: Logout result code
+                  errorDescription:
+                    type: string
+                    description: Error details, if any
+            application/xml:
+              schema:
+                type: object
+                xml:
+                  name: CsoAuth
+                properties:
+                  loginResult:
+                    type: string
+                  errorDescription:
+                    type: string
