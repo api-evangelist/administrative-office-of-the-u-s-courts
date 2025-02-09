@@ -15,6 +15,9 @@ apis:
       - Legal
   - aid: administrative-office-of-the-u-s-courts:pacer-case-locator-pcl-api
     name: PACER Case Locator (PCL) API
+    tags:
+      - Legal
+      - Courts
     humanURL: >-
       https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
     description: >-
@@ -22,9 +25,9 @@ apis:
       The public PCL API allows users to programmatically search the PCL for
       federal cases or associated parties. This API uses the same search
       functionality as the PCL application and searches the same data set.
-    tags:
-      - Legal
-      - Courts
+    properties:
+      - type: OpenAPI
+        url: properties/pacer-case-locator-pcl-api-openapi.yml
 name: Administrative Office of the U.S. Courts
 tags:
   - Federal Government
