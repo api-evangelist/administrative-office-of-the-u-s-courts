@@ -4,23 +4,14 @@ url: >-
 apis:
   - aid: administrative-office-of-the-u-s-courts:pacer-authentication-api
     name: PACER Authentication API
-    tags:
-      - Courts
-      - Legal
     humanURL: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
     description: >-
       To access court records, the first step is to get an authentication token
       using your PACER username and password. The PACER Authentication API
       allows the user to authenticate automatically and without a user
       interface. This can help facilitate access for automated systems.
-    properties:
-      - type: OpenAPI
-        url: properties/pacer-authentication-api-openapi.yml
   - aid: administrative-office-of-the-u-s-courts:pacer-case-locator-pcl-api
     name: PACER Case Locator (PCL) API
-    tags:
-      - Legal
-      - Courts
     humanURL: >-
       https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
     description: >-
@@ -28,13 +19,11 @@ apis:
       The public PCL API allows users to programmatically search the PCL for
       federal cases or associated parties. This API uses the same search
       functionality as the PCL application and searches the same data set.
-    properties:
-      - type: OpenAPI
-        url: properties/pacer-case-locator-pcl-api-openapi.yml
 name: Administrative Office of the U.S. Courts
 tags:
   - Federal Government
   - Courts
+  - Legal
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
