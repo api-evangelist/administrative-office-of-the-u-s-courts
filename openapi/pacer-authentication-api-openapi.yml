@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: PACER Authentication API
+  title: Administrative Office of the U.S. Courts PACER Authentication API
   description: API for authenticating users with PACER credentials.
   version: 1.0.0
 servers:
@@ -14,7 +14,7 @@ servers:
 paths:
   /services/cso-auth:
     post:
-      summary: Authenticate a user
+      summary: Administrative Office of the U.S. Courts Authenticate a user
       description: >-
         Authenticate using PACER username and password to get an authentication
         token.
@@ -84,7 +84,7 @@ paths:
                     type: string
   /services/cso-logout:
     post:
-      summary: Logout a user
+      summary: Administrative Office of the U.S. Courts Logout a user
       description: Invalidates the authentication token
       requestBody:
         required: true
