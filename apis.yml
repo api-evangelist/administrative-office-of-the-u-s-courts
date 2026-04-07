@@ -5,8 +5,8 @@ name: Administrative Office of the U.S. Courts
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Federal Government
   - Courts
+  - Federal Government
   - Legal
 description: >-
   The Administrative Office of the United States Courts is the administrative
@@ -20,8 +20,8 @@ apis:
   - aid: administrative-office-of-the-u-s-courts:pacer-authentication-api
     name: PACER Authentication API
     tags:
-      - Courts
       - Authentication
+      - Courts
     humanURL: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
     properties:
       - url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide

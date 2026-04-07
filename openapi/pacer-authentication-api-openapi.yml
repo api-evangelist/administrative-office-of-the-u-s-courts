@@ -82,6 +82,8 @@ paths:
                     type: string
                   errorDescription:
                     type: string
+      tags:
+        - Services
   /services/cso-logout:
     post:
       summary: Administrative Office of the U.S. Courts Logout a user
@@ -128,3 +130,7 @@ paths:
                     type: string
                   errorDescription:
                     type: string
+      tags:
+        - Services
+tags:
+  - name: Services

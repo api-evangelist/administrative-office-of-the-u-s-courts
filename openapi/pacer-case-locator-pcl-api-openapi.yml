@@ -26,6 +26,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CaseSearchResponse'
+      tags:
+        - Cases
   /parties/find:
     post:
       summary: Administrative Office of the U.S. Courts Search for parties
@@ -43,6 +45,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PartySearchResponse'
+      tags:
+        - Parties
 components:
   schemas:
     CaseSearchRequest:
@@ -118,3 +122,6 @@ components:
                 type: string
               caseNumberFull:
                 type: string
+tags:
+  - name: Cases
+  - name: Parties
