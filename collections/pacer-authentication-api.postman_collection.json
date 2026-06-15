@@ -1,0 +1,255 @@
+{
+  "item": [
+    {
+      "id": "85737260-a86e-4c3e-bdca-7844ed4e48c1",
+      "name": "Services",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0357b4ee-432f-4eda-8aa6-c7ffb63b9f19",
+          "name": "Administrative Office of the U.S. Courts Authenticate a user",
+          "request": {
+            "name": "Administrative Office of the U.S. Courts Authenticate a user",
+            "description": {
+              "content": "Authenticate using PACER username and password to get an authentication token.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "cso-auth"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": " (This can only be one of qa-login,pacer.login)",
+                  "type": "any",
+                  "value": "{{environment}}",
+                  "key": "environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"loginId\": \"<string>\",\n  \"password\": \"<string>\",\n  \"clientCode\": \"<string>\",\n  \"redactFlag\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "217c4da1-3d41-4cbb-814d-c3fc1eb48153",
+              "name": "Successful authentication",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "cso-auth"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": " (This can only be one of qa-login,pacer.login)",
+                      "type": "any",
+                      "value": "{{environment}}",
+                      "key": "environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"loginId\": \"<string>\",\n  \"password\": \"<string>\",\n  \"clientCode\": \"<string>\",\n  \"redactFlag\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"nextGenCSO\": \"string\",\n  \"loginResult\": \"string\",\n  \"errorDescription\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "586fc797-fad3-45ae-bfa9-14d219bda078",
+          "name": "Administrative Office of the U.S. Courts Logout a user",
+          "request": {
+            "name": "Administrative Office of the U.S. Courts Logout a user",
+            "description": {
+              "content": "Invalidates the authentication token",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "services",
+                "cso-logout"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": " (This can only be one of qa-login,pacer.login)",
+                  "type": "any",
+                  "value": "{{environment}}",
+                  "key": "environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nextGenCSO\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1ad24f86-d354-45cc-a7f7-d34b043533ab",
+              "name": "Successful logout",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "services",
+                    "cso-logout"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": " (This can only be one of qa-login,pacer.login)",
+                      "type": "any",
+                      "value": "{{environment}}",
+                      "key": "environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextGenCSO\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"loginResult\": \"string\",\n  \"errorDescription\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": " (This can only be one of qa-login,pacer.login)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "qa-login",
+      "key": "environment"
+    },
+    {
+      "type": "string",
+      "value": "https://{{environment}}.uscourts.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2b3d8832-bd9e-4e44-958c-38860b68c25c",
+    "name": "Administrative Office of the U.S. Courts PACER Authentication API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for authenticating users with PACER credentials.",
+      "type": "text/plain"
+    }
+  }
+}

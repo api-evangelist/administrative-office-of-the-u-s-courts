@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Administrative Office of the U.S. Courts PACER Case Locator API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cases",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Administrative Office of the U.S. Courts Search for cases",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qa-pcl.uscourts.gov/pcl-public-api/rest/cases/find",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns a list of cases matching the search criteria."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Parties",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Administrative Office of the U.S. Courts Search for parties",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qa-pcl.uscourts.gov/pcl-public-api/rest/parties/find",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Returns a list of parties matching the search criteria."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Administrative Office of the U.S. Courts PACER Authentication API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Services",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Administrative Office of the U.S. Courts Authenticate a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{environment}.uscourts.gov/services/cso-auth",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Authenticate using PACER username and password to get an authentication token."
+        },
+        {
+          "info": {
+            "name": "Administrative Office of the U.S. Courts Logout a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{environment}.uscourts.gov/services/cso-logout",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invalidates the authentication token"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

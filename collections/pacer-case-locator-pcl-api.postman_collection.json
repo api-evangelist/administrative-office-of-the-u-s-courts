@@ -1,0 +1,229 @@
+{
+  "item": [
+    {
+      "id": "a97a1c99-079d-4cb5-bad1-feac6893ade4",
+      "name": "Cases",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "294ff27f-8589-4165-801b-b9c5550bd273",
+          "name": "Administrative Office of the U.S. Courts Search for cases",
+          "request": {
+            "name": "Administrative Office of the U.S. Courts Search for cases",
+            "description": {
+              "content": "Returns a list of cases matching the search criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cases",
+                "find"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"caseNumberFull\": \"<string>\",\n  \"caseTitle\": \"<string>\",\n  \"dateFiledFrom\": \"<date>\",\n  \"dateFiledTo\": \"<date>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e16729e9-7e8f-41de-9bdc-d1b0e4474d27",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cases",
+                    "find"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"caseNumberFull\": \"<string>\",\n  \"caseTitle\": \"<string>\",\n  \"dateFiledFrom\": \"<date>\",\n  \"dateFiledTo\": \"<date>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"receipt\": {\n    \"transactionDate\": \"2000-03-06T03:54:13.328Z\",\n    \"billablePages\": 140,\n    \"searchFee\": \"string\"\n  },\n  \"cases\": [\n    {\n      \"courtId\": \"string\",\n      \"caseId\": 7397,\n      \"caseTitle\": \"string\",\n      \"dateFiled\": \"1963-10-10\"\n    },\n    {\n      \"courtId\": \"string\",\n      \"caseId\": 8202,\n      \"caseTitle\": \"string\",\n      \"dateFiled\": \"1976-01-17\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "aee58ba1-5c7e-408c-ba15-83a288aff7cb",
+      "name": "Parties",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d4d29379-1740-40f7-aab4-fd69240b892a",
+          "name": "Administrative Office of the U.S. Courts Search for parties",
+          "request": {
+            "name": "Administrative Office of the U.S. Courts Search for parties",
+            "description": {
+              "content": "Returns a list of parties matching the search criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "parties",
+                "find"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"lastName\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"caseNumberFull\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "677c0036-43fd-47a5-a022-82afaf7435cd",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "parties",
+                    "find"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lastName\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"caseNumberFull\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"receipt\": {\n    \"transactionDate\": \"1988-07-30T10:50:20.254Z\",\n    \"billablePages\": 8360,\n    \"searchFee\": \"string\"\n  },\n  \"parties\": [\n    {\n      \"lastName\": \"string\",\n      \"firstName\": \"string\",\n      \"caseNumberFull\": \"string\"\n    },\n    {\n      \"lastName\": \"string\",\n      \"firstName\": \"string\",\n      \"caseNumberFull\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://qa-pcl.uscourts.gov/pcl-public-api/rest",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "47c5ae0e-4ab9-494a-a733-6b5a66e51f5a",
+    "name": "Administrative Office of the U.S. Courts PACER Case Locator API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for searching federal court cases and associated parties.",
+      "type": "text/plain"
+    }
+  }
+}
