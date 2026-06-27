@@ -77,7 +77,7 @@ common:
     url: https://pacer.uscourts.gov/
   - type: DeveloperPortal
     url: https://pacer.uscourts.gov/file-case/developer-resources
-  - type: SignUp
+  - type: Signup
     url: https://pacer.uscourts.gov/register-account
   - type: Contact
     url: https://pacer.uscourts.gov/contact-us
