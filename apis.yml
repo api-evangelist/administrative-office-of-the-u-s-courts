@@ -69,6 +69,10 @@ apis:
         url: >-
           https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/openapi/pacer-case-locator-pcl-api-openapi.yml
 common:
+  - type: DomainSecurity
+    url: security/administrative-office-of-the-u-s-courts-domain-security.yml
+  - url: https://www.uscourts.gov/feed
+    type: Blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/administrative-office-of-the-united-states-courts
   - type: Website

@@ -1,0 +1,29 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.uscourts.gov
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 26 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: pacer.uscourts.gov
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  8 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 16070400
+- host: qa-pcl.uscourts.gov
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 30 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 10886400
+domains:
+- domain: uscourts.gov
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
