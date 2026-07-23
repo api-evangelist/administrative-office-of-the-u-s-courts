@@ -1,0 +1,77 @@
+openapi: 3.1.0
+info:
+  title: Administrative Office of the U.S. Courts PACER Authentication Cases API
+  description: API for authenticating users with PACER credentials.
+  version: 1.0.0
+servers:
+- url: https://{environment}.uscourts.gov
+  variables:
+    environment:
+      enum:
+      - qa-login
+      - pacer.login
+      default: qa-login
+tags:
+- name: Cases
+paths:
+  /cases/find:
+    post:
+      summary: Administrative Office of the U.S. Courts Search for cases
+      description: Returns a list of cases matching the search criteria.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CaseSearchRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CaseSearchResponse'
+      tags:
+      - Cases
+components:
+  schemas:
+    CaseSearchResponse:
+      type: object
+      properties:
+        receipt:
+          type: object
+          properties:
+            transactionDate:
+              type: string
+              format: date-time
+            billablePages:
+              type: integer
+            searchFee:
+              type: string
+        cases:
+          type: array
+          items:
+            type: object
+            properties:
+              courtId:
+                type: string
+              caseId:
+                type: integer
+              caseTitle:
+                type: string
+              dateFiled:
+                type: string
+                format: date
+    CaseSearchRequest:
+      type: object
+      properties:
+        caseNumberFull:
+          type: string
+        caseTitle:
+          type: string
+        dateFiledFrom:
+          type: string
+          format: date
+        dateFiledTo:
+          type: string
+          format: date

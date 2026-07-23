@@ -1,0 +1,70 @@
+openapi: 3.1.0
+info:
+  title: Administrative Office of the U.S. Courts PACER Authentication Cases Parties API
+  description: API for authenticating users with PACER credentials.
+  version: 1.0.0
+servers:
+- url: https://{environment}.uscourts.gov
+  variables:
+    environment:
+      enum:
+      - qa-login
+      - pacer.login
+      default: qa-login
+tags:
+- name: Parties
+paths:
+  /parties/find:
+    post:
+      summary: Administrative Office of the U.S. Courts Search for parties
+      description: Returns a list of parties matching the search criteria.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PartySearchRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PartySearchResponse'
+      tags:
+      - Parties
+components:
+  schemas:
+    PartySearchResponse:
+      type: object
+      properties:
+        receipt:
+          type: object
+          properties:
+            transactionDate:
+              type: string
+              format: date-time
+            billablePages:
+              type: integer
+            searchFee:
+              type: string
+        parties:
+          type: array
+          items:
+            type: object
+            properties:
+              lastName:
+                type: string
+              firstName:
+                type: string
+              caseNumberFull:
+                type: string
+    PartySearchRequest:
+      type: object
+      properties:
+        lastName:
+          type: string
+        firstName:
+          type: string
+        caseNumberFull:
+          type: string

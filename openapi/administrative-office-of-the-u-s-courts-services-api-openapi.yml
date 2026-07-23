@@ -1,23 +1,23 @@
 openapi: 3.1.0
 info:
-  title: Administrative Office of the U.S. Courts PACER Authentication API
+  title: Administrative Office of the U.S. Courts PACER Authentication Cases Services API
   description: API for authenticating users with PACER credentials.
   version: 1.0.0
 servers:
-  - url: https://{environment}.uscourts.gov
-    variables:
-      environment:
-        enum:
-          - qa-login
-          - pacer.login
-        default: qa-login
+- url: https://{environment}.uscourts.gov
+  variables:
+    environment:
+      enum:
+      - qa-login
+      - pacer.login
+      default: qa-login
+tags:
+- name: Services
 paths:
   /services/cso-auth:
     post:
       summary: Administrative Office of the U.S. Courts Authenticate a user
-      description: >-
-        Authenticate using PACER username and password to get an authentication
-        token.
+      description: Authenticate using PACER username and password to get an authentication token.
       requestBody:
         required: true
         content:
@@ -37,7 +37,7 @@ paths:
                 redactFlag:
                   type: string
                   enum:
-                    - '1'
+                  - '1'
                   description: Required for filers to comply with redaction rules
           application/xml:
             schema:
@@ -83,7 +83,7 @@ paths:
                   errorDescription:
                     type: string
       tags:
-        - Services
+      - Services
   /services/cso-logout:
     post:
       summary: Administrative Office of the U.S. Courts Logout a user
@@ -131,6 +131,4 @@ paths:
                   errorDescription:
                     type: string
       tags:
-        - Services
-tags:
-  - name: Services
+      - Services
