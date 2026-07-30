@@ -1,4 +1,17 @@
 aid: administrative-office-of-the-u-s-courts
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/administrative-office-of-the-u-s-courts.png
 url: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/apis.yml
 name: Administrative Office of the U.S. Courts
 created: '2024-11-20'
@@ -21,53 +34,68 @@ description: >-
   also provides CM/ECF developer resources for building tools that interface with the Case Management and Electronic
   Case Filing system.
 apis:
-  - aid: administrative-office-of-the-u-s-courts:pacer-authentication-api
-    name: PACER Authentication API
-    description: >-
-      The PACER Authentication API allows users to authenticate automatically and without a user interface, facilitating
-      programmatic access for automated systems to court records. Users provide PACER credentials to receive an
-      authentication token used to access the PCL API and other PACER services. Required before using the PACER Case
-      Locator API.
-    humanURL: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
-    tags:
-      - Authentication
-      - Courts
-      - PACER
-      - REST API
-    properties:
-      - type: Documentation
-        url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
-      - type: APIReference
-        url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/openapi/pacer-authentication-api-openapi.yml
-  - aid: administrative-office-of-the-u-s-courts:pacer-case-locator-pcl-api
-    name: PACER Case Locator (PCL) API
-    description: >-
-      The PACER Case Locator (PCL) API is a REST API providing programmatic access to a nationwide index of federal
-      court cases across all Federal Appellate, District, and Bankruptcy courts. Supports both immediate searches
-      (returning up to 5,400 items per search) and batch searches (up to 108,000 items). Case searches return groups of
-      cases; party searches return parties associated with cases. Supports JSON and XML encoding. Requires PACER
-      authentication token. Separate QA and Production environments are available for development and testing.
-    humanURL: https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
-    tags:
-      - Courts
-      - Legal
-      - Case Records
-      - Federal Courts
-      - REST API
-      - PACER
-    properties:
-      - type: Documentation
-        url: https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
-      - type: APIReference
-        url: https://pacer.uscourts.gov/sites/default/files/files/PCL-API-Document_3.pdf
-      - type: GettingStarted
-        url: https://pacer.uscourts.gov/file-case/developer-resources
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/openapi/pacer-case-locator-pcl-api-openapi.yml
+- aid: >-
+    administrative-office-of-the-u-s-courts:administrative-office-of-the-u-s-courts-cases-api
+  name: Administrative Office of the U.S. Courts Cases API
+  description: The Cases API from Administrative Office of the U.S. Courts — 1 operation(s) for cases.
+  humanURL: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  tags:
+  - Cases
+  properties:
+  - type: OpenAPI
+    url: openapi/administrative-office-of-the-u-s-courts-cases-api-openapi.yml
+  - type: Documentation
+    url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  - type: APIReference
+    url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  - type: Documentation
+    url: https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
+  - type: APIReference
+    url: https://pacer.uscourts.gov/sites/default/files/files/PCL-API-Document_3.pdf
+  - type: GettingStarted
+    url: https://pacer.uscourts.gov/file-case/developer-resources
+- aid: >-
+    administrative-office-of-the-u-s-courts:administrative-office-of-the-u-s-courts-parties-api
+  name: Administrative Office of the U.S. Courts Parties API
+  description: >-
+    The Parties API from Administrative Office of the U.S. Courts — 1 operation(s) for parties.
+  humanURL: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  tags:
+  - Parties
+  properties:
+  - type: OpenAPI
+    url: openapi/administrative-office-of-the-u-s-courts-parties-api-openapi.yml
+  - type: Documentation
+    url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  - type: APIReference
+    url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  - type: Documentation
+    url: https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
+  - type: APIReference
+    url: https://pacer.uscourts.gov/sites/default/files/files/PCL-API-Document_3.pdf
+  - type: GettingStarted
+    url: https://pacer.uscourts.gov/file-case/developer-resources
+- aid: >-
+    administrative-office-of-the-u-s-courts:administrative-office-of-the-u-s-courts-services-api
+  name: Administrative Office of the U.S. Courts Services API
+  description: >-
+    The Services API from Administrative Office of the U.S. Courts — 2 operation(s) for services.
+  humanURL: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/administrative-office-of-the-u-s-courts-services-api-openapi.yml
+  - type: Documentation
+    url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  - type: APIReference
+    url: https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide
+  - type: Documentation
+    url: https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide
+  - type: APIReference
+    url: https://pacer.uscourts.gov/sites/default/files/files/PCL-API-Document_3.pdf
+  - type: GettingStarted
+    url: https://pacer.uscourts.gov/file-case/developer-resources
 common:
   - type: AgenticAccess
     url: agentic-access/administrative-office-of-the-u-s-courts-agentic-access.yml
