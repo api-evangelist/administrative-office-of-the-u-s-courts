@@ -1,0 +1,18 @@
+{
+  "provider": "administrative-office-of-the-u-s-courts",
+  "sources": [
+    "administrative-office-of-the-u-s-courts-cases-api-openapi.yml",
+    "administrative-office-of-the-u-s-courts-parties-api-openapi.yml",
+    "administrative-office-of-the-u-s-courts-services-api-openapi.yml"
+  ],
+  "outputs": [
+    "administrative-office-of-the-u-s-courts-cases-api-openapi.yml",
+    "administrative-office-of-the-u-s-courts-parties-api-openapi.yml",
+    "administrative-office-of-the-u-s-courts-services-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
