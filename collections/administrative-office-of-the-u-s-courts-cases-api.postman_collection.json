@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "4254452e-ee87-4725-b4f5-746f57e7553a",
+      "name": "Cases",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9770685f-3c2e-413e-9a25-fad40751ffa5",
+          "name": "Administrative Office of the U.S. Courts Search for cases",
+          "request": {
+            "name": "Administrative Office of the U.S. Courts Search for cases",
+            "description": {
+              "content": "Returns a list of cases matching the search criteria.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cases",
+                "find"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": " (This can only be one of qa-login,pacer.login)",
+                  "type": "any",
+                  "value": "{{environment}}",
+                  "key": "environment"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"caseNumberFull\": \"<string>\",\n  \"caseTitle\": \"<string>\",\n  \"dateFiledFrom\": \"<date>\",\n  \"dateFiledTo\": \"<date>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "66c90813-9f77-416e-b5d3-501acb4a8f41",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cases",
+                    "find"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": " (This can only be one of qa-login,pacer.login)",
+                      "type": "any",
+                      "value": "{{environment}}",
+                      "key": "environment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"caseNumberFull\": \"<string>\",\n  \"caseTitle\": \"<string>\",\n  \"dateFiledFrom\": \"<date>\",\n  \"dateFiledTo\": \"<date>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"receipt\": {\n    \"transactionDate\": \"1974-07-09T16:51:24.947Z\",\n    \"billablePages\": 3418,\n    \"searchFee\": \"string\"\n  },\n  \"cases\": [\n    {\n      \"courtId\": \"string\",\n      \"caseId\": 1047,\n      \"caseTitle\": \"string\",\n      \"dateFiled\": \"1970-03-29\"\n    },\n    {\n      \"courtId\": \"string\",\n      \"caseId\": 1064,\n      \"caseTitle\": \"string\",\n      \"dateFiled\": \"1952-01-04\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": " (This can only be one of qa-login,pacer.login)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "qa-login",
+      "key": "environment"
+    },
+    {
+      "type": "string",
+      "value": "https://{{environment}}.uscourts.gov",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0d9b4439-8ddf-4753-8c40-74a6301e1187",
+    "name": "Administrative Office of the U.S. Courts PACER Authentication Cases API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for authenticating users with PACER credentials.",
+      "type": "text/plain"
+    }
+  }
+}
