@@ -16,7 +16,7 @@ url: https://raw.githubusercontent.com/api-evangelist/administrative-office-of-t
 name: Administrative Office of the U.S. Courts
 created: '2024-11-20'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 tags:
   - Courts
   - Federal Government
