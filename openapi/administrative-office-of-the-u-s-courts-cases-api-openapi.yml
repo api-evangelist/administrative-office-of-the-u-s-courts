@@ -1,16 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Administrative Office of the U.S. Courts PACER Authentication Cases API
-  description: API for authenticating users with PACER credentials.
+  title: Administrative Office of the U.S. Courts PACER Case Locator Cases API
+  description: API for searching federal court cases and associated parties.
   version: 1.0.0
 servers:
-- url: https://{environment}.uscourts.gov
-  variables:
-    environment:
-      enum:
-      - qa-login
-      - pacer.login
-      default: qa-login
+- url: https://qa-pcl.uscourts.gov/pcl-public-api/rest
+  description: QA Environment
+- url: https://pcl.uscourts.gov/pcl-public-api/rest
+  description: Production Environment
 tags:
 - name: Cases
 paths:
@@ -35,6 +32,19 @@ paths:
       - Cases
 components:
   schemas:
+    CaseSearchRequest:
+      type: object
+      properties:
+        caseNumberFull:
+          type: string
+        caseTitle:
+          type: string
+        dateFiledFrom:
+          type: string
+          format: date
+        dateFiledTo:
+          type: string
+          format: date
     CaseSearchResponse:
       type: object
       properties:
@@ -62,16 +72,3 @@ components:
               dateFiled:
                 type: string
                 format: date
-    CaseSearchRequest:
-      type: object
-      properties:
-        caseNumberFull:
-          type: string
-        caseTitle:
-          type: string
-        dateFiledFrom:
-          type: string
-          format: date
-        dateFiledTo:
-          type: string
-          format: date
