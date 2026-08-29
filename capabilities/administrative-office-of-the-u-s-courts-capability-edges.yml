@@ -1,0 +1,36 @@
+slug: administrative-office-of-the-u-s-courts
+provider: Administrative Office of the U.S. Courts
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Public Sector & Government
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Cases
+  spec_file: administrative-office-of-the-u-s-courts-cases-api-openapi.yml
+  capability_id: BC-3320.70
+  capability_id_l1: BC-3320
+  capability_name: Court Records and Public Access
+  confidence: 0.85
+  evidence: POST /cases/find 'Search for cases'; 'API for searching federal court cases and associated
+    parties'; PACER = 'Public Access to Court Electronic Records'
+  reason: PACER Case Locator provides public programmatic search of federal court case records — court
+    records maintenance and public access within court administration, not case filing or docketing (operations
+    are read/search only).
+- tag: Parties
+  spec_file: administrative-office-of-the-u-s-courts-parties-api-openapi.yml
+  capability_id: BC-3320.70
+  capability_id_l1: BC-3320
+  capability_name: Court Records and Public Access
+  confidence: 0.8
+  evidence: POST /parties/find 'Search for parties'; 'API for searching federal court cases and associated
+    parties'
+  reason: Public search of party records within federal court case files via PACER — public access to
+    court records. 'Parties' is a court-record entity here, not a commercial counterparty.

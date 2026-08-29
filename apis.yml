@@ -117,6 +117,9 @@ apis:
   - type: GettingStarted
     url: https://pacer.uscourts.gov/file-case/developer-resources
 common:
+  - type: CapabilityMap
+    url: capabilities/administrative-office-of-the-u-s-courts-capability-edges.yml
+    name: Administrative Office of the U.S. Courts Business Capability Map
   - type: AgenticAccess
     url: agentic-access/administrative-office-of-the-u-s-courts-agentic-access.yml
   - type: DomainSecurity
