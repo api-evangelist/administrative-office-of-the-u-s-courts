@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Administrative Office of the U.S. Courts PACER Case Locator Cases API
+  title: Administrative Office of the U.S.
   description: API for searching federal court cases and associated parties.
   version: 1.0.0
 servers:
@@ -30,21 +30,10 @@ paths:
                 $ref: '#/components/schemas/CaseSearchResponse'
       tags:
       - Cases
+      operationId: postCasesFind
+      x-operation-id-source: derived
 components:
   schemas:
-    CaseSearchRequest:
-      type: object
-      properties:
-        caseNumberFull:
-          type: string
-        caseTitle:
-          type: string
-        dateFiledFrom:
-          type: string
-          format: date
-        dateFiledTo:
-          type: string
-          format: date
     CaseSearchResponse:
       type: object
       properties:
@@ -72,3 +61,16 @@ components:
               dateFiled:
                 type: string
                 format: date
+    CaseSearchRequest:
+      type: object
+      properties:
+        caseNumberFull:
+          type: string
+        caseTitle:
+          type: string
+        dateFiledFrom:
+          type: string
+          format: date
+        dateFiledTo:
+          type: string
+          format: date

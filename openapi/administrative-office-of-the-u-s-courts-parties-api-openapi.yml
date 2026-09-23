@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Administrative Office of the U.S. Courts PACER Case Locator Parties API
+  title: Administrative Office of the U.S.
   description: API for searching federal court cases and associated parties.
   version: 1.0.0
 servers:
@@ -30,6 +30,8 @@ paths:
                 $ref: '#/components/schemas/PartySearchResponse'
       tags:
       - Parties
+      operationId: postPartiesFind
+      x-operation-id-source: derived
 components:
   schemas:
     PartySearchResponse:
