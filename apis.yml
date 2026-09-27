@@ -31,7 +31,7 @@ modified: '2026-05-19'
 specificationVersion: '0.23'
 tags:
   - Courts
-  - Federal-Government
+  - Federal Government
   - Legal
   - PACER
   - Case Records
@@ -45,6 +45,7 @@ tags_raw:
   - Case Records
   - Judiciary
   - Open Data
+  - Federal-Government
 description: >-
   The Administrative Office of the United States Courts is the administrative agency of the United States federal court
   system, established in 1939. It provides legislative, administrative, legal, financial, management, program, and
