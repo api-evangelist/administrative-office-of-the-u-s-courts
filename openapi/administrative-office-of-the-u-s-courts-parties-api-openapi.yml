@@ -34,15 +34,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    PartySearchRequest:
-      type: object
-      properties:
-        lastName:
-          type: string
-        firstName:
-          type: string
-        caseNumberFull:
-          type: string
     PartySearchResponse:
       type: object
       properties:
@@ -67,3 +58,12 @@ components:
                 type: string
               caseNumberFull:
                 type: string
+    PartySearchRequest:
+      type: object
+      properties:
+        lastName:
+          type: string
+        firstName:
+          type: string
+        caseNumberFull:
+          type: string
