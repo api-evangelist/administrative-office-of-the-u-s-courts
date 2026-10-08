@@ -118,6 +118,12 @@ apis:
   - type: GettingStarted
     url: https://pacer.uscourts.gov/file-case/developer-resources
 common:
+  - type: Plans
+    url: plans/administrative-office-of-the-u-s-courts-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/administrative-office-of-the-u-s-courts-rate-limits.yml
+  - type: FinOps
+    url: finops/administrative-office-of-the-u-s-courts-finops.yml
   - type: CapabilityMap
     url: capabilities/administrative-office-of-the-u-s-courts-capability-edges.yml
     name: Administrative Office of the U.S. Courts Business Capability Map
