@@ -1,4 +1,4 @@
-# Administrative Office of the U.S. Courts (administrative-office-of-the-u-s-courts)
+# Administrative Office of the U.S. Courts
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,87 +66,118 @@
 
 The Administrative Office of the United States Courts is the administrative agency of the United States federal court system, established in 1939. It provides legislative, administrative, legal, financial, management, program, and information technology support services to the federal courts. The agency operates PACER (Public Access to Court Electronic Records), which provides programmatic access to case and docket information from Federal Appellate, District, and Bankruptcy courts via the PACER Authentication API and PACER Case Locator (PCL) REST API. The agency also provides CM/ECF developer resources for building tools that interface with the Case Management and Electronic Case Filing system.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/apis.yml)
+**Areas:** Courts · Federal Government · Legal · PACER · Case Records · Judiciary · Open Data
 
-## Tags
+## Administrative Office of the U.S. Courts on APIs.io
 
-- Courts
-- Federal Government
-- Legal
-- PACER
-- Case Records
-- Judiciary
-- Open Data
+Everything profiled for Administrative Office of the U.S. Courts is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/administrative-office-of-the-u-s-courts/](https://apis.io/providers/administrative-office-of-the-u-s-courts/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (3)
 
-- **Created:** 2024-11-20
-- **Modified:** 2026-05-19
+- [Administrative Office of the U.S. Courts Cases API](https://apis.io/apis/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-cases-api/) — The Cases API from Administrative Office of the U.S. Courts — 1 operation(s) for cases.
+- [Administrative Office of the U.S. Courts Parties API](https://apis.io/apis/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-parties-api/) — The Parties API from Administrative Office of the U.S. Courts — 1 operation(s) for parties.
+- [Administrative Office of the U.S. Courts Services API](https://apis.io/apis/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-services-api/) — The Services API from Administrative Office of the U.S. Courts — 2 operation(s) for services.
 
-## APIs
+### Published properties
 
-### PACER Authentication API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The PACER Authentication API allows users to authenticate automatically and without a user interface, facilitating programmatic access for automated systems to court records. Users provide PACER credentials to receive an authentication token used to access the PCL API and other PACER services. Required before using the PACER Case Locator API.
+#### Agentic access (1)
 
-- **Human URL:** [https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide](https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Administrative Office Of The U S Courts Agentic Access](https://apis.io/agentic-access/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-agentic-access/)
 
-- Authentication
-- Courts
-- PACER
-- REST API
+#### Collections (5)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide)
-- [API Reference](https://pacer.uscourts.gov/help/pacer/pacer-authentication-api-user-guide)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/openapi/pacer-authentication-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/pacer-authentication-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pacer-authentication-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/pacer-case-locator-pcl-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pacer-case-locator-pcl-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Administrative Office of the U.S. Courts PACER Authentication Cases API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-administrative-office-of-the-u-s-courts-cases-api/)
+- [Administrative Office of the U.S. Courts PACER Authentication Cases Parties API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-administrative-office-of-the-u-s-courts-parties-api/)
+- [Administrative Office of the U.S. Courts PACER Authentication Cases Services API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-administrative-office-of-the-u-s-courts-services-api/)
+- [Administrative Office of the U.S. Courts PACER Authentication API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-pacer-authentication-api/)
+- [Administrative Office of the U.S. Courts PACER Case Locator API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-pacer-case-locator-pcl-api/)
 
-### PACER Case Locator (PCL) API
+#### Security (1)
 
-The PACER Case Locator (PCL) API is a REST API providing programmatic access to a nationwide index of federal court cases across all Federal Appellate, District, and Bankruptcy courts. Supports both immediate searches (returning up to 5,400 items per search) and batch searches (up to 108,000 items). Case searches return groups of cases; party searches return parties associated with cases. Supports JSON and XML encoding. Requires PACER authentication token. Separate QA and Production environments are available for development and testing.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide](https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide)
+- [Administrative Office Of The U S Courts Domain Security](https://apis.io/security/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Courts
-- Legal
-- Case Records
-- Federal Courts
-- REST API
-- PACER
+Published plans, tiers and prices.
 
-#### Properties
+- [Administrative Office Of The U S Courts Plans Pricing](https://apis.io/plans/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-plans-pricing/)
 
-- [Documentation](https://pacer.uscourts.gov/help/pacer/pacer-case-locator-pcl-api-user-guide)
-- [API Reference](https://pacer.uscourts.gov/sites/default/files/files/PCL-API-Document_3.pdf)
-- [Getting Started](https://pacer.uscourts.gov/file-case/developer-resources)
-- [OpenAPI](https://raw.githubusercontent.com/api-evangelist/administrative-office-of-the-u-s-courts/refs/heads/main/openapi/pacer-case-locator-pcl-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/pacer-authentication-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pacer-authentication-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/pacer-case-locator-pcl-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/pacer-case-locator-pcl-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-## Common Properties
+Published request limits.
 
-- [LinkedIn](https://www.linkedin.com/company/administrative-office-of-the-united-states-courts)
+- [Administrative Office Of The U S Courts Rate Limits](https://apis.io/rate-limits/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Administrative Office Of The U S Courts Finops](https://apis.io/finops/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.uscourts.gov/)
-- [Portal](https://pacer.uscourts.gov/)
-- [Developer Portal](https://pacer.uscourts.gov/file-case/developer-resources)
-- [Sign Up](https://pacer.uscourts.gov/register-account)
-- [Contact](https://pacer.uscourts.gov/contact-us)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Blog](https://www.uscourts.gov/feed)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 27.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 42.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 21.1 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/administrative-office-of-the-u-s-courts/](https://apis.io/providers/administrative-office-of-the-u-s-courts/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Administrative Office of the U.S. Courts: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/administrative-office-of-the-u-s-courts/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
