@@ -86,7 +86,7 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Administrative Office Of The U S Courts Agentic Access](https://apis.io/agentic-access/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-agentic-access/)
+- [Administrative Office of the U.S. Courts Agentic Access](https://apis.io/agentic-access/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-agentic-access/)
 
 #### Collections (5)
 
@@ -98,29 +98,35 @@ Postman and Open Collection request collections.
 - [Administrative Office of the U.S. Courts PACER Authentication API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-pacer-authentication-api/)
 - [Administrative Office of the U.S. Courts PACER Case Locator API](https://apis.io/collections/administrative-office-of-the-u-s-courts/open-pacer-case-locator-pcl-api/)
 
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Administrative Office of the U.S. Courts API Rules](https://apis.io/rules/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-rules/)
+
 #### Security (1)
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Administrative Office Of The U S Courts Domain Security](https://apis.io/security/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-domain-security/)
+- [Administrative Office of the U.S. Courts Domain Security](https://apis.io/security/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Administrative Office Of The U S Courts Plans Pricing](https://apis.io/plans/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-plans-pricing/)
+- [Administrative Office of the U.S. Courts Plans Pricing](https://apis.io/plans/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Administrative Office Of The U S Courts Rate Limits](https://apis.io/rate-limits/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-rate-limits/)
+- [Administrative Office of the U.S. Courts Rate Limits](https://apis.io/rate-limits/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-rate-limits/)
 
 #### FinOps (1)
 
 What the API costs to run, by operation.
 
-- [Administrative Office Of The U S Courts Finops](https://apis.io/finops/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-finops/)
+- [Administrative Office of the U.S. Courts Finops](https://apis.io/finops/administrative-office-of-the-u-s-courts/administrative-office-of-the-u-s-courts-finops/)
 
 ## Where to find this API
 
@@ -131,18 +137,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 27.8** — thin · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 27.6** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 57.1 |
 | Contract quality | 42.2 |
-| Contract governance | 0.0 |
-| Operational transparency | 7.9 |
+| Contract governance | 13.6 |
+| Operational transparency | 7.1 |
 | Developer ergonomics | 40.5 |
-| Access clarity | 21.1 |
+| Access clarity | 17.0 |
 
-**Agent readiness 15.4** — agent-aware
+**Agent readiness 16.8** — agent-aware
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -165,8 +171,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 5.9** — Government & Public Sector
+**Regulatory alignment 0.0** — Government & Public Sector
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/administrative-office-of-the-u-s-courts/](https://apis.io/providers/administrative-office-of-the-u-s-courts/).
 
